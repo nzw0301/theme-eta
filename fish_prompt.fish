@@ -1,4 +1,4 @@
-# name: Integral
+# name: Eta
 function _git_branch_name
   echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
@@ -37,9 +37,11 @@ function fish_prompt
   set -l yellow (set_color yellow)
   set -l normal (set_color normal)
   set -l green (set_color green)
+  set -l slavic_color_blue (set_color 6EC9DD)
 
-  set -l arrow "∫"
+  set -l arrow "∮"
   set -l cwd $blue(prompt_pwd)
+  set -l host $slavic_color_blue(hostname | cut -d . -f 1)
 
   if [ (_git_branch_name) ]
     set -l git_branch (_git_branch_name)
@@ -54,12 +56,9 @@ function fish_prompt
     end
   end
 
-  echo -n -s $cwd' '"$git_info" $normal $arrow ' '
+  echo -n -s $host ":"  $cwd' '"$git_info" $normal $arrow ' '
 end
 
 function fish_right_prompt
-  set -l dark_gray (set_color 222)
-  
-  echo -n -s $dark_gray ' ['(date +%H:%M:%S)'] '
-
+  echo -n -s $blue ' ['(date +%H:%M:%S)'] '
 end
