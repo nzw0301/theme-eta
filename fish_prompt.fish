@@ -1,4 +1,7 @@
-# name: Eta
+# name: line-integral
+# forked from oh-my-fish/theme-integral
+# https://github.com/oh-my-fish/theme-integral
+
 function _git_branch_name
   echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end

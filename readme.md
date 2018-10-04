@@ -1,6 +1,8 @@
-## integral
+## line-integral
 
 A simple git upstream theme.
+
+This theme is based on [omf/theme-integral](https://github.com/oh-my-fish/theme-integral).
 
 #### Characteristics
 
@@ -8,6 +10,4 @@ A simple git upstream theme.
 * Dirty working directory
 * Working directory
 * Git upstream status
-
-#### Screenshot
-![Integral Screenshot](https://cloud.githubusercontent.com/assets/21774/2715353/70af1520-c50a-11e3-9db3-74933fbb8d91.png)
+* Host name
